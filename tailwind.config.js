@@ -10,6 +10,9 @@ export default {
 				backBackground: '#090D1F',
 				background: '#ffff',
 			},
+			screens: {
+				custom: { min: '890px' },
+			},
 		},
 	},
 	plugins: [],

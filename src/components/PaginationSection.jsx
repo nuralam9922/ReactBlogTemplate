@@ -2,7 +2,7 @@ import React from 'react';
 
 function PaginationSection() {
 	return (
-		<div className="h-[61px] w-full flex flex-col items-center justify-between md:flex-row  gap-10 border-t-2 py-10 mt-10">
+		<div className="min-h-[61px] w-full flex flex-col items-center justify-between md:flex-row  gap-10 border-t-2 py-10 mt-10">
 			<div className="h-[20px] w-[86px] flex items-center justify-between gap-[8px] cursor-pointer">
 				<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path
@@ -23,7 +23,7 @@ function PaginationSection() {
 				<button type="button" className="w-[40px] flex items-center justify-center bg-[#F9F5FF] text-[#7F56D9] rounded-[8px] ">
 					1
 				</button>
-				{[2, 3, 4].map((item, index) => {
+				{[2, 3,].map((item, index) => {
 					return (
 						<button key={item} type="button" className="w-[40px] flex items-center justify-center  rounded-[8px] ">
 							{item}

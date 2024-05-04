@@ -1,36 +1,9 @@
-import React from 'react';
-import image from '../assets/demoImages/image.png';
+import React from 'react'
 import ImageComponent from './ImageComponent';
+import image from '../assets/demoImages/image.png';
 
-const colorSet = [
-	{
-		textColor: '#6941C6',
-		backgroundColor: '#F9F5FF',
-	},
-	{
-		textColor: '#3538CD',
-		backgroundColor: '#EEF4FF',
-	},
-	{
-		textColor: '#C11574',
-		backgroundColor: '#FDF2FA',
-	},
-	{
-		textColor: '#027A48',
-		backgroundColor: '#ECFDF3',
-	},
-	{
-		textColor: '#C4320A',
-		backgroundColor: '#FFF6ED',
-	},
-];
-
-const color = () => {
-	return colorSet[Math.floor(Math.random() * colorSet.length)];
-};
-
-function Cart() {
-	return (
+function VerticalCart() {
+  return (
 		<div className="w-full min-h-[448px]  flex flex-col  gap-[24px]">
 			<div className="w-full cursor-pointer h-[278px] rounded-sm">
 				<ImageComponent width="100" height="278" src={image} />
@@ -62,14 +35,14 @@ function Cart() {
 				{/* blog category or types */}
 				<div className="w-full select-none h-[24px] flex items-center gap-[8px] flex-wrap ">
 					{['Design', 'Product', 'UX', 'UX'].map((item, index) => {
-						const randomColor = color();
+						// const randomColor = color();
 
 						return (
 							<div
 								key={index}
-								style={{
-									backgroundColor: randomColor.backgroundColor,
-								}}
+								// style={{
+								// 	backgroundColor: randomColor.backgroundColor,
+								// }}
 								className="capitalize p-4 px-4 rounded-full flex items-center justify-center text-[14px] font-[500] h-[20px] w-[47] leading-[20px] "
 							>
 								{item}
@@ -79,7 +52,7 @@ function Cart() {
 				</div>
 			</div>
 		</div>
-	);
+  );
 }
 
-export default Cart;
+export default VerticalCart

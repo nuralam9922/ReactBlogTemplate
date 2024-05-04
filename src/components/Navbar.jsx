@@ -1,10 +1,14 @@
 import React from 'react';
 import hamBergerIcon from '../assets/icons/menu-outline.png';
 import moon from '../assets/icons/moon.png';
+import Logo from './Logo';
+
 function Navbar() {
 	return (
 		<div className="w-full p-[20px] md:p-[30px] lg:p-[40px] h-[72px]  flex items-center justify-between">
-			<div className="logo text-textPrimary leading-[24px] text-[18px] font-bold">The Blog</div>
+			<div className="logo text-textPrimary">
+				<Logo Width="180" height="40" />
+			</div>
 			<div className="flex items-center justify-between  h-[40px] gap-[14px] text-textPrimary leading-[24px]">
 				<ul className=" items-center hidden md:flex justify-between gap-[14px]">
 					<li className="p-[8px]  text-[18px]">Blog</li>
