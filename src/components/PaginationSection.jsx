@@ -19,23 +19,23 @@ function PaginationSection() {
 
 			{/* diddle */}
 
-			<div className="w-[402px]  h-[40px] flex gap-[5px]">
+			<div className="  h-[40px] flex gap-[5px]">
 				<button type="button" className="w-[40px] flex items-center justify-center bg-[#F9F5FF] text-[#7F56D9] rounded-[8px] ">
 					1
 				</button>
 				{[2, 3,].map((item, index) => {
 					return (
-						<button key={item} type="button" className="w-[40px] flex items-center justify-center  rounded-[8px] ">
+						<button key={item} type="button" className="w-[40px] text-textPrimary flex items-center justify-center  rounded-[8px] ">
 							{item}
 						</button>
 					);
 				})}
-				<button type="button" className="w-[40px] flex items-center justify-center  rounded-[8px] ">
+				<button type="button" className="w-[40px] flex items-center text-textPrimary justify-center  rounded-[8px] ">
 					...
 				</button>
 				{[8, 9, 10].map((item, index) => {
 					return (
-						<button key={item} type="button" className="w-[40px] flex items-center justify-center  rounded-[8px] ">
+						<button key={item} type="button" className="w-[40px] text-textPrimary flex items-center justify-center  rounded-[8px] ">
 							{item}
 						</button>
 					);

@@ -4,14 +4,17 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				textPrimary: '#1A1A1A',
-				textSecondary: '#6941C6',
-				textAscent: '#667085',
-				backBackground: '#090D1F',
-				background: '#ffff',
+				textPrimary: 'var(--textPrimary)',
+				textSecondary: 'var(--textSecondary)',
+				textAscent: 'var(--textAscent)',
+				backBackground: 'var(--backBackground)',
+				background: 'var(--background)',
 			},
 			screens: {
 				custom: { min: '890px' },
+				customForNavList: {max: '1002px'},
+				customMenu: {min: '1002px'}
+
 			},
 		},
 	},

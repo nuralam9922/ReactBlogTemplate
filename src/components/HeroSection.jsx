@@ -1,7 +1,33 @@
 import React from 'react';
 import image from '../assets/demoImages/image.png';
 import ImageComponent from '../components/ImageComponent'; // Import ImageComponent if not already imported
-  
+  const colorSet = [
+		{
+			textColor: '#6941C6',
+			backgroundColor: '#F9F5FF',
+		},
+		{
+			textColor: '#3538CD',
+			backgroundColor: '#EEF4FF',
+		},
+		{
+			textColor: '#C11574',
+			backgroundColor: '#FDF2FA',
+		},
+		{
+			textColor: '#027A48',
+			backgroundColor: '#ECFDF3',
+		},
+		{
+			textColor: '#C4320A',
+			backgroundColor: '#FFF6ED',
+		},
+  ];
+
+  const color = () => {
+		return colorSet[Math.floor(Math.random() * colorSet.length)];
+  };
+
 function HeroSection() {
 	return (
 		<section className="">
@@ -9,7 +35,7 @@ function HeroSection() {
 			<div className="flex gap-5 flex-col  custom:grid md:grid-cols-2  lg:grid-cols-2 md:gap-[24px] lg:gap-[62px]">
 				{/* First column placeholder */}
 				<div className="w-full min-h-[432px] flex flex-col  justify-between gap-[32px]">
-					<div className="w-full cursor-pointer h-[278px] rounded-sm">
+					<div className="w-full cursor-pointer h-[308px] overflow-hidden rounded-sm">
 						<ImageComponent width={100} height={308} src={image} />
 					</div>
 
@@ -38,8 +64,10 @@ function HeroSection() {
 						{/* Blog category or types */}
 						<div className="w-full select-none h-[24px] flex items-center gap-[8px] flex-wrap">
 							{['Design', 'Product', 'UX', 'UX'].map((item, index) => {
+										const randomColor = color();
 								return (
 									<div
+										style={{ backgroundColor: randomColor.backgroundColor, color: randomColor.textColor }}
 										key={index}
 										className="capitalize p-4 px-4 rounded-full flex items-center justify-center text-[14px] font-[500] h-[20px] w-[47] leading-[20px]"
 									>
@@ -82,8 +110,10 @@ function HeroSection() {
 							{/* Blog category or types */}
 							<div className="w-full select-none h-[24px] flex items-center gap-[8px] flex-wrap">
 								{['Design', 'Product'].map((item, index) => {
+									const randomColor = color();
 									return (
 										<div
+											style={{ backgroundColor: randomColor.backgroundColor, color: randomColor.textColor }}
 											key={index}
 											className="capitalize p-4 px-4 rounded-full flex items-center justify-center text-[14px] font-[500] h-[20px] w-[47] leading-[20px]"
 										>
@@ -124,8 +154,10 @@ function HeroSection() {
 							{/* Blog category or types */}
 							<div className="w-full select-none h-[24px] flex items-center gap-[8px] flex-wrap">
 								{['Design', 'Product'].map((item, index) => {
+									const randomColor = color();
 									return (
 										<div
+											style={{ backgroundColor: randomColor.backgroundColor, color: randomColor.textColor }}
 											key={index}
 											className="capitalize p-4 px-4 rounded-full flex items-center justify-center text-[14px] font-[500] h-[20px] w-[47] leading-[20px]"
 										>
@@ -178,8 +210,10 @@ function HeroSection() {
 							{/* Blog category or types */}
 							<div className="w-full select-none h-[24px] flex items-center gap-[8px] flex-wrap">
 								{['Design', 'Product'].map((item, index) => {
+									const randomColor = color();
 									return (
 										<div
+											style={{ backgroundColor: randomColor.backgroundColor, color: randomColor.textColor }}
 											key={index}
 											className="capitalize p-4 px-4 rounded-full flex items-center justify-center text-[14px] font-[500] h-[20px] w-[47] leading-[20px]"
 										>

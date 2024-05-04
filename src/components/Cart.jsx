@@ -32,8 +32,8 @@ const color = () => {
 function Cart() {
 	return (
 		<div className="w-full min-h-[448px]  flex flex-col  gap-[24px]">
-			<div className="w-full cursor-pointer h-[278px] rounded-sm">
-				<ImageComponent width="100" height="278" src={image} />
+			<div className="w-full cursor-pointer h-[278px] overflow-hidden rounded-sm">
+				<ImageComponent width="100" height="278px" src={image} />
 			</div>
 
 			<div className="min-h-[196px] w-full flex flex-col gap-[24px] lg:gap-[15px]">
