@@ -38,6 +38,12 @@ Contributions are welcome! Feel free to submit pull requests to suggest improvem
 
 ## The Figma design are created by [Faqih Sopyan](https://www.figma.com/community/file/1235152009438565697/the-blog-a-web-personal-blog)
 
+## Preview Images
+
+![Preview](./public/images/img-1.png)
+![Preview](./public/images/img-2.png)
+
+
 ## Contact
 For any questions or inquiries, please contact [inbox.nuralam@gmail.com](mailto:inbox.nuralam@gmail.com).
 
