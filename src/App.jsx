@@ -10,6 +10,9 @@ import loadingGif from './assets/loading/loading.gif';
 function App() {
 	const locomotiveScroll = new LocomotiveScroll();
 
+
+	
+
 	return (
 		<main className=" max-w-screen-2xl  mx-auto poppins-regular bg-background  ">
 			<Navbar />

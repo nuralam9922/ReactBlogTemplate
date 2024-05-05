@@ -7,7 +7,9 @@ import './Navbar.css';
 import { useState } from 'react';
 import { IoClose, IoSearch } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
-
+import ThemeIcon from '../ThemeIcon';
+import { BsHammer } from 'react-icons/bs';
+import { HiMenu } from 'react-icons/hi';
 
 const navList = [
 	{
@@ -38,7 +40,9 @@ const mobileMenu = (setIsOpen, isOpen) => {
 
 	return (
 		<div
-			className={`absolute w-full h-screen customMenu:hidden bg-[#1A1A1A] backdrop-blur-3xl flex items-center justify-center text-textPrimary ${animationClass}`}
+			className={`absolute w-full  h-screen ${
+				isOpen && 'customMenu:hidden'
+			} bg-[#1A1A1A] backdrop-blur-3xl flex items-center justify-center text-textPrimary ${animationClass}`}
 		>
 			{/* close icon */}
 			<div onClick={() => setIsOpen((prev) => !prev)} className="absolute top-5 cursor-pointer right-5 text-white text-3xl">
@@ -56,7 +60,7 @@ const mobileMenu = (setIsOpen, isOpen) => {
 };
 
 function Navbar() {
-	const [isOpen, setIsOpen] = useState(true);
+	const [isOpen, setIsOpen] = useState(false);
 
 	const toggleMenu = () => {
 		setIsOpen(!isOpen);
@@ -91,13 +95,18 @@ function Navbar() {
 							<IoSearch /> Search..
 						</div>
 					</li>
+
+					<ThemeIcon />
 				</ul>
-				<img src={hamBergerIcon} onClick={toggleMenu} className="size-[32px] block cursor-pointer customMenu:hidden" alt="" />
+
+				<div onClick={toggleMenu} className="size-[32px] border block cursor-pointer customMenu:hidden">
+					<HiMenu className='w-full h-full' />
+				</div>
 			</div>
 
 			{/* mobile menu */}
 
-			{mobileMenu(setIsOpen, isOpen)}
+			{isOpen && mobileMenu(setIsOpen, isOpen)}
 		</div>
 	);
 }

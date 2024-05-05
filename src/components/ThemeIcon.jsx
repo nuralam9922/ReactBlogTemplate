@@ -1,30 +1,28 @@
-import React from 'react'
+import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { changeTheme } from '../theme/changeTheme';
 
-function ThemeIcon() {
-  	const [theme, setTheme] = useState('light');
+import moon from '../assets/icons/moon.png';
+import sun from '../assets/icons/sun.png';
 
-	useEffect(() => {
-		const storedTheme = localStorage.getItem('theme');
-		if (storedTheme) {
-			setTheme(storedTheme);
-			changeTheme(storedTheme);
-		}
-	}, []);
+import useTheme from '../hooks/useThem';
+
+function ThemeIcon() {
+	const [theme, changeTheme] = useTheme();
 
 	const handleThemeChange = () => {
-		const newTheme = theme === 'light' ? 'dark' : 'light';
-		setTheme(newTheme);
-		changeTheme(newTheme);
+		changeTheme();
 	};
-  return (
+
+	// console.log(theme);
+
+	return (
 		<li onClick={handleThemeChange} className="   px-5  bg-transparent duration-300 flex items-center justify-center gap-[16px] bg-transparent">
 			{/* <div className="w-[24px] h-[24px] du cursor-pointer rounded-full bg-backBackground"></div> */}
 			<img src={theme === 'light' ? moon : sun} className="size-[24px] bg-transparent cursor-pointer " alt="" />
 		</li>
-  );
+	);
 }
 
-export default ThemeIcon
+export default ThemeIcon;
