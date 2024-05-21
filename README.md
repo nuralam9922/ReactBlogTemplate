@@ -43,7 +43,6 @@ Contributions are welcome! Feel free to submit pull requests to suggest improvem
 ![Preview](./public/images/img-1.png)
 ![Preview](./public/images/img-2.png)
 
-
 ## Contact
 For any questions or inquiries, please contact [inbox.nuralam@gmail.com](mailto:inbox.nuralam@gmail.com).
 

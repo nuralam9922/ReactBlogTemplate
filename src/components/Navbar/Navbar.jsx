@@ -1,15 +1,13 @@
 import React from 'react';
-import hamBergerIcon from '../../assets/icons/menu-outline.png';
-import Logo from '../Logo';
+import { Logo } from '../../components';
 
 import './Navbar.css';
 
 import { useState } from 'react';
+import { HiMenu } from 'react-icons/hi';
 import { IoClose, IoSearch } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 import ThemeIcon from '../ThemeIcon';
-import { BsHammer } from 'react-icons/bs';
-import { HiMenu } from 'react-icons/hi';
 
 const navList = [
 	{
@@ -100,7 +98,7 @@ function Navbar() {
 				</ul>
 
 				<div onClick={toggleMenu} className="size-[32px] border block cursor-pointer customMenu:hidden">
-					<HiMenu className='w-full h-full' />
+					<HiMenu className="w-full h-full" />
 				</div>
 			</div>
 
